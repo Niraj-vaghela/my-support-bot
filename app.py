@@ -3,9 +3,10 @@ from datetime import datetime
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings # NEW for 2026
 from langchain_chroma import Chroma
-from langchain.retrievers.multi_query import MultiQueryRetriever
-from langchain.chains import create_history_aware_retriever, create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_classic.retrievers import MultiQueryRetriever
+
+from langchain_classic.chains import create_history_aware_retriever, create_retrieval_chain
+from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 # --- 2026 CONFIGURATION ---
