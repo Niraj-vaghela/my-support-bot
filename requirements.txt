@@ -3,3 +3,6 @@ langchain-groq
 langchain-huggingface
 langchain-chroma
 sentence-transformers
+langchain-community
+langchain-core
+
