@@ -10,7 +10,7 @@ from langchain_classic.chains.combine_documents import create_stuff_documents_ch
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 # --- 2026 CONFIGURATION ---
-LLM_MODEL = "llama-3.2-3b-preview"
+LLM_MODEL = "llama-3.3-70b-versatile-v2"
 # DB_DIR must be a relative path in your GitHub repo (e.g., './chroma_db')
 DB_DIR = "./Jan_2026_new_all-minilm_26122025" 
 
@@ -114,4 +114,5 @@ if prompt := st.chat_input("Ask about our services..."):
     
     # [Continue with history_retriever, qa_prompt, and qa_chain as in your original code]
     # return create_retrieval_chain(history_retriever, qa_chain)
+
 
