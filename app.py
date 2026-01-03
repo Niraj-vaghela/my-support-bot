@@ -89,7 +89,7 @@ for msg in st.session_state.messages:
 
 if prompt := st.chat_input("Ask about our services..."):
     # 1. Handle User Input
-    ts_user = get_timestamp()
+    ts_user = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     st.session_state.messages.append({"role": "user", "content": prompt, "time": ts_user})
     with st.chat_message("user"):
         st.caption(f"🕒 {ts_user}")
@@ -97,7 +97,7 @@ if prompt := st.chat_input("Ask about our services..."):
 
     # 2. Handle Assistant Response
     with st.chat_message("assistant"):
-        ts_bot = get_timestamp()
+        ts_bot = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         st.caption(f"🕒 {ts_bot}")
         
         history = [(m["role"], m["content"]) for m in st.session_state.messages[:-1]]
@@ -114,3 +114,4 @@ if prompt := st.chat_input("Ask about our services..."):
     
     # [Continue with history_retriever, qa_prompt, and qa_chain as in your original code]
     # return create_retrieval_chain(history_retriever, qa_chain)
+
